@@ -437,7 +437,7 @@ public class GradeCalculatorFrame extends JFrame {
             mp1Field = createInputGroup(container, "MP1 (0 - 100)", 100);
             mp2Field = createInputGroup(container, "MP2 (0 - 100)", 100);
             mp3Field = createInputGroup(container, "MP3 (0 - 100)", 100);
-            mp4Field = createInputGroup(container, "MP4 (0 - 100)", 100);
+            mp4Field = createInputGroup(container, "MP3 Documentation (0 - 100)", 100);
 
             container.add(Box.createRigidArea(new Dimension(0,10)));
             // Absences
@@ -630,7 +630,7 @@ public class GradeCalculatorFrame extends JFrame {
 
             String[] steps = {
                 String.format("Lab Exam = ( %.2f*0.20 ) + ( %.2f*0.30 ) + ( %.2f*0.20 ) + ( %.2f*0.30 ) = %.2f", java1, java2, js1, js2, labExam),
-                String.format("Lab Work = ( %.2f + %.2f + %.2f + %.2f ) / 4 = %.2f", mp1, mp2, mp3, mp4, labWork),
+                String.format("Lab Work = ( %.2f + %.2f + %.2f + %.2f ) / 4 = %.2f", mp1, mp2, mp3, mp3 docu, labWork),
                 String.format("Attendance = 100 - ( %d * 10 ) = %.2f", absences, attendance),
                 String.format("Class Standing = ( %.2f*0.60 ) + ( %.2f*0.40 ) = %.2f", labWork, attendance, labClassStanding),
                 String.format("Final Grade = ( %.2f*0.60 ) + ( %.2f*0.40 ) = %.2f", labExam, labClassStanding, labGrade)
